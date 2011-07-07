@@ -6,10 +6,11 @@
 //   http://jquery.malsup.com/block
 //
 // params : parameters to give to blockUI
+// callback : plugin callback
 
 (function( $ ){
 
-  $.fn.toggleSection = function(params) {
+  $.fn.toggleSection = function(params, callback) {
     var el = this; // get element
 
     // set default params (no message), merging with ones given
@@ -27,6 +28,11 @@
         .end()
         .slideUp('slow', 'linear');
 
+    }
+    
+    // allow the plugin to support callbacks
+    if (typeof callback == 'function') {
+        callback.call(this);
     }
     
   };
