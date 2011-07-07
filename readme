@@ -1,0 +1,12 @@
+// toggleSection
+//
+// disables all sections below the (this) element
+//
+// requires jquery.blockUI plugin
+//   http://jquery.malsup.com/block
+//
+// params : parameters to give to blockUI
+// callback : plugin callback
+//
+// author: John Griffiths
+// version: 0.3
